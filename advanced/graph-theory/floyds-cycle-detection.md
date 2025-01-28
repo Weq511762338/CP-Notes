@@ -8,15 +8,17 @@ description: a.k.a "tortoise and the hare algorithm"
 
 Use a `slow` pointer and `fast` pointer to traverse over a graph/linkedlist, where `slow` moves by 1 whereas `fast` moves by 2 every round. Eventually, if there is a cycle in the graph/linkedlist, `fast` and `slow` will meet at some point, indicating that a cycle exists.
 
+Think of them as two runners on a track: Since the fast runner runs exactly **twice** as fast as the slow runner, if there exists a cycle, the two runners will inevitably meet at some moment within the cycle.
+
+<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+
 
 
 Floyd's Cycle Detection can find more information about the cyclic graph:
 
 ## Find Cycle Length
 
-To find the cycle length, the difference between the distance  `fast` and `slow` pointer each travel is exactly the cycle length. Think of them as two runners on a track: Since the fast runner runs exactly **twice** as fast as the slow runner, the moment the fast runner catches the slow runner is exactly when the fast runner has traveled 1 complete cycle more than the slow runner.
-
-<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+To find the cycle length, first find the meeting point where  `fast` and `slow` pointer collides. Then the cycle length can be found by running the `slow`pointer from that meeting point until it reaches back to itself.
 
 ## Find Cycle Starting Point
 
