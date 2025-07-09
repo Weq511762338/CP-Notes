@@ -9,7 +9,7 @@ The data needs to be sorted in a one-directional order, such that every time we 
 
 ## Template
 
-Note: The formula for `mid` , the while loop condition, and updating `l` and `r` can vary slightly depending on the problem context.
+Note: The formula for `mid` , the while loop condition, and updating `l` and `r` can vary slightly depending on the problem context. **Also, when the numbers go into negative domain, it can be different and treated with care!**
 
 ```cpp
 int l = 0, r = n;
